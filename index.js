@@ -1,4 +1,5 @@
 const express = require('express')
+const morgan = require('morgan')
 // might need db connection
 
 const app = express()
@@ -13,6 +14,9 @@ app.use(express.urlencoded({ extended: true }))
 
 // static folder
 app.use(express.static('public'))
+
+// morgan config
+app.use(morgan('dev'))
 
 // view engine
 app.set('view engine', 'ejs')
