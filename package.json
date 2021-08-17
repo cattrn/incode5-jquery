@@ -6,6 +6,8 @@
   "scripts": {
     "start": "node -r dotenv/config index.js",
     "dev": "nodemon -r dotenv/config -e js,ejs,css,sql index.js",
+    "create-db": "psql -U postgres -f sql/create-db.sql",
+    "create-tables": "psql -U postgres -d movie_rating_project5 -f sql/create-tables.sql",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
