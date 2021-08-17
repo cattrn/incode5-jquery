@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 3000
 
 // require routes
 const homeRouter = require('./routes/home')
+const movieRouter = require('./routes/movie')
 
 // body parser
 app.use(express.json())
@@ -23,6 +24,7 @@ app.set('view engine', 'ejs')
 app.set('views', './views')
 
 // middleware - routes
+app.use('/movie', movieRouter)
 app.use('/', homeRouter)
 
 app.listen(PORT, () => {

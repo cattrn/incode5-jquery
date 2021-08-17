@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Individual movie</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const movie_id = <%= movie_id %>
+    </script>
+    <script src="/js/movie.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <form method="POST" action="/movie/<%= movie_id %>">
+        <label for="rating">Please rate movie:</label>
+        <select id="rating" name="rating">
+          <!--CHANGE RATING LIMIT IN LOOP-->
+          <% for (let i = 1; i <= 10; i++) { %>
+            <option value="<%= i %>"><%= i %></option>
+          <% } %>
+        </select>
+        <button type="submit">Rate</button>
+      </form>
+      
+    </main>
+  </body>
+</html>

@@ -24,9 +24,9 @@ function getMovies(page) {
         const movieHTML = $("<div>")
           .append(`<h2 class="movie-title">${movie.title}</h2>`)
           .append(
-            `<img src="${image_URL + movie.poster_path}" alt="${
+            `<a href="/movie/${movie.id}"><img src="${image_URL + movie.poster_path}" alt="${
               movie.title
-            } poster">`
+            } poster"></a>`
           )
         $("#insert-here").append(movieHTML)
       }
