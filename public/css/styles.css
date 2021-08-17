@@ -6,3 +6,26 @@
   display: flex;
   flex-wrap:wrap;
 }
+
+#stars {
+  position: relative;
+  width: fit-content;
+}
+
+#inactive-stars {
+  color: grey;
+}
+
+#active-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: orange;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#stars svg {
+  width: 40px;
+  /* margin: 10px; */
+}
