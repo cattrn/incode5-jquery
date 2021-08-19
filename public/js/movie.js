@@ -1,8 +1,6 @@
-const base_URL = "https://api.themoviedb.org/3"
-const api_key = "?api_key=141aeff6699de660e1fd52ed6be89c45"
 const image_URL = "https://image.tmdb.org/t/p/w185"
 
-$.getJSON(base_URL + "/movie/" + movie_id + api_key)
+$.getJSON('/api/individual-movie/' + movie_id + '?token=')
   .then(data => {
     console.log(data)
     $("main")
